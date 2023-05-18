@@ -5,20 +5,31 @@ namespace UPBT.Player.Character
 {
     public class Targeting : MonoBehaviour
     {
-        public int TargetPosition { get; private set; }
+        // ReSharper disable once Unity.NoNullPropagation
+        public IFightParticipant? Target => ManagerCollection.FightManager?.GetEnemyOrNull(targetPosition);
+
+        private TargetType targetType;
+        private int targetPosition;
         
         public void SelectEnemyToRight()
         {
             var fightManager = ManagerCollection.FightManager;
             if (fightManager is not null)
             {
-                TargetPosition = Mathf.Min(TargetPosition + 1, fightManager.EnemyCount - 1);
+                targetPosition = Mathf.Min(targetPosition + 1, fightManager.EnemyCount - 1);
             }
         }
         
         public void SelectEnemyToLeft()
         {
-            TargetPosition = Mathf.Max(TargetPosition - 1, 0);
+            targetPosition = Mathf.Max(targetPosition - 1, 0);
         }
+    }
+
+    public enum TargetType
+    {
+        Enemy,
+        Ally,
+        Self
     }
 }

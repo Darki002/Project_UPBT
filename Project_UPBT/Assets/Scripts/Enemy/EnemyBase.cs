@@ -4,7 +4,7 @@ using UPBT.managers;
 
 namespace UPBT.Enemy
 {
-    public class EnemyBase : MonoBehaviour
+    public class EnemyBase : MonoBehaviour, IFightParticipant
     {
         public int FightPosition => fightPosition;
 

@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
-using UPBT.managers;
 using UPBT.Player.Character;
 
 namespace UPBT.Systems
@@ -13,7 +11,7 @@ namespace UPBT.Systems
 
         public void AttackEnemy()
         {
-            var target = ManagerCollection.FightManager!.GetEnemyOrNull(targetingSystem.TargetPosition);
+            var target = targetingSystem.Target;
             if (target is not null)
             {
                 target.DealDamage(damage);
