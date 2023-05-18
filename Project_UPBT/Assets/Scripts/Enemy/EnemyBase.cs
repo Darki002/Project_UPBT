@@ -15,7 +15,6 @@ namespace UPBT.Enemy
             if (ManagerCollection.FightManager is not null)
             {
                 fightPosition = ManagerCollection.FightManager.AddEnemyToFight(this);
-                Debug.Log(fightPosition);
             }
 
             PositionEnemyBasedOnFightPosition();

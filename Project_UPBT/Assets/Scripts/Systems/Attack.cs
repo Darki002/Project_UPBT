@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using UPBT.managers;
+using UPBT.Player.Character;
 
 namespace UPBT.Systems
 {
@@ -7,30 +9,15 @@ namespace UPBT.Systems
     {
         [SerializeField] private int damage;
 
-        private int targetPosition;
+        [SerializeField] private Targeting targetingSystem = null!;
 
         public void AttackEnemy()
         {
-            Debug.Log(targetPosition);
-            var target = ManagerCollection.FightManager!.GetEnemyOrNull(targetPosition);
+            var target = ManagerCollection.FightManager!.GetEnemyOrNull(targetingSystem.TargetPosition);
             if (target is not null)
             {
                 target.DealDamage(damage);
             }
-        }
-
-        public void SelectEnemyToRight()
-        {
-            var fightManager = ManagerCollection.FightManager;
-            if (fightManager is not null)
-            {
-                targetPosition = Mathf.Min(targetPosition + 1, fightManager.EnemyCount - 1);
-            }
-        }
-        
-        public void SelectEnemyToLeft()
-        {
-            targetPosition = Mathf.Max(targetPosition - 1, 0);
         }
     }
 }
