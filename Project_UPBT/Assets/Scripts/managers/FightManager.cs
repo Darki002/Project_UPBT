@@ -6,6 +6,8 @@ namespace UPBT.managers
 {
     public class FightManager : MonoBehaviour
     {
+        public int EnemyCount => enemies.Count;
+        
         private readonly List<EnemyBase> enemies = new List<EnemyBase>();
 
         private void Awake()
@@ -16,12 +18,12 @@ namespace UPBT.managers
         public int AddEnemyToFight(EnemyBase enemy)
         {
             enemies.Add(enemy);
-            return enemies.Count;
+            return enemies.FindIndex(e => e == enemy);
         }
 
         public EnemyBase? GetEnemyOrNull(int i)
         {
-            if (i > enemies.Count)
+            if (i > enemies.Count - 1)
             {
                 return null;
             }
