@@ -17,7 +17,7 @@ namespace UPBT.Systems
 
         private void GetDefeated()
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

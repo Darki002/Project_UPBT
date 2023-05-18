@@ -17,5 +17,14 @@ namespace UPBT.managers
         {
             enemies.Add(enemy);
         }
+
+        public EnemyBase? GetEnemyOrNull(int i)
+        {
+            if (i > enemies.Count)
+            {
+                return null;
+            }
+            return enemies[i];
+        }
     }
 }

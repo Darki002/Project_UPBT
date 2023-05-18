@@ -1,4 +1,4 @@
-using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace UPBT.managers
 {
