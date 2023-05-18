@@ -13,9 +13,10 @@ namespace UPBT.managers
             ManagerCollection.RegisterOrGetDestroyed(this);
         }
 
-        public void AddEnemyToFight(EnemyBase enemy)
+        public int AddEnemyToFight(EnemyBase enemy)
         {
             enemies.Add(enemy);
+            return enemies.Count;
         }
 
         public EnemyBase? GetEnemyOrNull(int i)
