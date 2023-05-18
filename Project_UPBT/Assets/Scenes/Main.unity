@@ -226,6 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 707904260}
+  - component: {fileID: 707904261}
   m_Layer: 0
   m_Name: FightManager
   m_TagString: Untagged
@@ -248,6 +249,18 @@ Transform:
   m_Father: {fileID: 1055686881}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &707904261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707904259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db3a5f0643870e42809b18be26456e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3950416101118013426, guid: a82866aa59ecb1745885078a7ab06f73, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -38.52
+      value: -35.67
       objectReference: {fileID: 0}
     - target: {fileID: 3950416101118013426, guid: a82866aa59ecb1745885078a7ab06f73, type: 3}
       propertyPath: m_LocalRotation.w
@@ -511,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6057744326566387412, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.23
+      value: -27.379997
       objectReference: {fileID: 0}
     - target: {fileID: 6057744326566387412, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
       propertyPath: m_LocalRotation.w
