@@ -27,7 +27,7 @@ namespace UPBT.Systems
         {
             var animParam = Animator.StringToHash("Die");
             animator.SetBool(animParam, true);
-            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length+animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
             Destroy(gameObject);
         }
     }
