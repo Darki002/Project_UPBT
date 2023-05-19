@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UPBT.managers;
@@ -6,7 +7,16 @@ namespace UPBT.Enemy
 {
     public class EnemyBase : MonoBehaviour, IFightParticipant
     {
-        public int FightPosition => fightPosition;
+        public event Action<EnemyBase>? OnDefeat;
+
+        public int FightPosition
+        {
+            set
+            {
+                fightPosition = value;
+                PositionEnemyBasedOnFightPosition();
+            }
+        }
 
         private int fightPosition;
         
@@ -31,6 +41,11 @@ namespace UPBT.Enemy
             var position = trans.position;
             position = new Vector3(x,  position.y, position.z);
             trans.position = position;
+        }
+
+        private void OnDestroy()
+        {
+            OnDefeat?.Invoke(this);
         }
     }
 }

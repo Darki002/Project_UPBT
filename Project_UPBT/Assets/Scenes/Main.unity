@@ -123,22 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &547679128 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6175614586928067142, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-  m_PrefabInstance: {fileID: 6024645474275500314}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 942e487be01aa8244830acdc8cf42bd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &547679129 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 212023818479027374, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-  m_PrefabInstance: {fileID: 6024645474275500314}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,27 +446,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c93fb78065ae194e8fb2dc39102e251, type: 3}
---- !u!95 &1586789631 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6931776873032758664, guid: a82866aa59ecb1745885078a7ab06f73, type: 3}
-  m_PrefabInstance: {fileID: 3555605094232962257}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2029829156 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6175614586928067142, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-  m_PrefabInstance: {fileID: 2045211279}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 942e487be01aa8244830acdc8cf42bd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &2029829157 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 212023818479027374, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-  m_PrefabInstance: {fileID: 2045211279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2045211279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -534,41 +497,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6175614586928067142, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 2029829157}
     - target: {fileID: 6871014129164928110, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
       propertyPath: m_Name
       value: Enemy Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2029829156}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DealDamage
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UPBT.Systems.Health, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
@@ -579,10 +510,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1599109924, guid: a82866aa59ecb1745885078a7ab06f73, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1586789631}
     - target: {fileID: 3950416101118013426, guid: a82866aa59ecb1745885078a7ab06f73, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -684,41 +611,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6175614586928067142, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 547679129}
     - target: {fileID: 6871014129164928110, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 547679128}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DealDamage
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UPBT.Systems.Health, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101793077009805189, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}
-      propertyPath: damageReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a959f6eb3bc60745977c42e660c164e, type: 3}

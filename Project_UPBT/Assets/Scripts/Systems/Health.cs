@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+using System.Collections;
 using UnityEngine;
 
 namespace UPBT.Systems
@@ -10,26 +10,25 @@ namespace UPBT.Systems
 
         public void DealDamage(int amount)
         {
-            var animParam = Animator.StringToHash("GetHit");
-            animator.SetTrigger(animParam);
-            
             health = Mathf.Max(health - amount, 0);
+
             if (health <= 0)
             {
-                GetDefeated();
+                StartCoroutine(PlayDieAnimation());
+            }
+            else
+            {
+                var animParam = Animator.StringToHash("GetHit");
+                animator.SetTrigger(animParam);
             }
         }
 
-        public void DieAnimationFinished()
+        private IEnumerator PlayDieAnimation()
         {
-            Task.Delay(100).Wait();
-            Destroy(gameObject);
-        }
-        
-        private void GetDefeated()
-        {
-            var animParam = Animator.StringToHash("DieAfterHit");
+            var animParam = Animator.StringToHash("Die");
             animator.SetBool(animParam, true);
+            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length+animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+            Destroy(gameObject);
         }
     }
 }

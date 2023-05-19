@@ -20,6 +20,10 @@ namespace UPBT.Systems
                 animator.SetTrigger(param);
                 target.DealDamage(damage);
             }
+            else
+            {
+                targetingSystem.SetNewTarget();
+            }
         }
     }
 }

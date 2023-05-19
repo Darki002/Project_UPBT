@@ -18,6 +18,7 @@ namespace UPBT.managers
         public int AddEnemyToFight(EnemyBase enemy)
         {
             enemies.Add(enemy);
+            enemy.OnDefeat += EnemyGotDefeated;
             return enemies.FindIndex(e => e == enemy);
         }
 
@@ -28,6 +29,16 @@ namespace UPBT.managers
                 return null;
             }
             return enemies[i];
+        }
+
+        private void EnemyGotDefeated(EnemyBase enemyBase)
+        {
+            enemies.Remove(enemyBase);
+            
+            for (var enemy = 0; enemy < enemies.Count; enemy++)
+            {
+                enemies[enemy].FightPosition = enemy;
+            }
         }
     }
 }
