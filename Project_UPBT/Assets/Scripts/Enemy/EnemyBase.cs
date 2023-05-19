@@ -20,9 +20,9 @@ namespace UPBT.Enemy
             PositionEnemyBasedOnFightPosition();
         }
 
-        public UnityEvent<int>? receiveDamage;
+        public UnityEvent<int>? damageReceived;
 
-        public void DealDamage(int amount) => receiveDamage?.Invoke(amount);
+        public void DealDamage(int amount) => damageReceived?.Invoke(amount);
 
         private void PositionEnemyBasedOnFightPosition()
         {
