@@ -1,18 +1,28 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace UPBT.Systems
 {
     public class Health : MonoBehaviour
     {
         [SerializeField] private Animator animator = null!;
-        [SerializeField] private int health;
+        [SerializeField] private int maxHealth;
+        [SerializeField] private UnityEvent<float, float>? onHealthStateChanged;
+
+        private int currentHealth;
+
+        private void Start()
+        {
+            currentHealth = maxHealth;
+        }
 
         public void DealDamage(int amount)
         {
-            health = Mathf.Max(health - amount, 0);
-
-            if (health <= 0)
+            currentHealth = Mathf.Max(currentHealth - amount, 0);
+            onHealthStateChanged?.Invoke(currentHealth, maxHealth);
+            
+            if (currentHealth <= 0)
             {
                 StartCoroutine(PlayDieAnimation());
             }
