@@ -5,6 +5,8 @@ namespace UPBT.Systems
 {
     public class Attack : MonoBehaviour
     {
+        [SerializeField] private Animator animator = null!;
+        
         [SerializeField] private int damage;
 
         [SerializeField] private Targeting targetingSystem = null!;
@@ -14,6 +16,8 @@ namespace UPBT.Systems
             var target = targetingSystem.Target;
             if (target is not null)
             {
+                var param = Animator.StringToHash("Attack");
+                animator.SetTrigger(param);
                 target.DealDamage(damage);
             }
         }

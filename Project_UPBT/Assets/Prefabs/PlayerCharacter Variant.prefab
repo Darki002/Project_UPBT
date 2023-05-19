@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_Name
-      value: PlayerCharacter Variant
+      value: Player_Character
       objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f9b72e7b2149f4db29039b8deae023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 6931776873032758664}
   damage: 10
   targetingSystem: {fileID: 1599109926}
 --- !u!114 &1599109925
@@ -157,3 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcbbc2e9611f6a4fae10d72e0ca9f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &6931776873032758664 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+  m_PrefabInstance: {fileID: 3555605095529973785}
+  m_PrefabAsset: {fileID: 0}

@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.57
+      value: 1.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.23
+      value: -27.379997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_Name
-      value: Enemy Variant
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -77,6 +77,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 78b3b013920e98f43b0c419fb3449846, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+--- !u!95 &212023818479027374 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+  m_PrefabInstance: {fileID: 6024645475546560831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6871014129164928110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 81bb9eea30387e442899949a80011e55, type: 3}
@@ -94,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942e487be01aa8244830acdc8cf42bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 212023818479027374}
   health: 100
 --- !u!114 &8101793077009805189
 MonoBehaviour:
@@ -107,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07d51e9778597d14cbcd08cb5f023f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receiveDamage:
+  damageReceived:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6175614586928067142}
