@@ -8,21 +8,23 @@ namespace UPBT.managers
     {
         public int EnemyCount => enemies.Count;
         
-        private readonly List<EnemyBase> enemies = new List<EnemyBase>();
+        private readonly List<IFightParticipant> enemies = new List<IFightParticipant>();
 
+        private readonly List<EnemyBase> playerCharacter = new List<EnemyBase>();
+        
         private void Awake()
         {
             ManagerCollection.RegisterOrGetDestroyed(this);
         }
 
-        public int AddEnemyToFight(EnemyBase enemy)
+        public int AddEnemyToFight(IFightParticipant enemy)
         {
             enemies.Add(enemy);
             enemy.OnDefeat += EnemyGotDefeated;
             return enemies.FindIndex(e => e == enemy);
         }
 
-        public EnemyBase? GetEnemyOrNull(int i)
+        public IFightParticipant? GetEnemyOrNull(int i)
         {
             if (i > enemies.Count - 1)
             {
@@ -31,7 +33,7 @@ namespace UPBT.managers
             return enemies[i];
         }
 
-        private void EnemyGotDefeated(EnemyBase enemyBase)
+        private void EnemyGotDefeated(IFightParticipant enemyBase)
         {
             enemies.Remove(enemyBase);
             

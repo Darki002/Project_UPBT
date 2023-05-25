@@ -7,7 +7,7 @@ namespace UPBT.Enemy
 {
     public class EnemyBase : MonoBehaviour, IFightParticipant
     {
-        public event Action<EnemyBase>? OnDefeat;
+        public event Action<IFightParticipant>? OnDefeat;
 
         public int FightPosition
         {

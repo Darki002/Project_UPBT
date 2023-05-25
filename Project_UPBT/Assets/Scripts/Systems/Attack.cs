@@ -1,6 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
-using UPBT.Player.Character;
+using UnityEngine.Serialization;
 
 namespace UPBT.Systems
 {
@@ -10,9 +11,14 @@ namespace UPBT.Systems
         
         [SerializeField] private int damage;
 
-        [SerializeField] private Targeting targetingSystem = null!;
+        private ITargeting targeting = null!;
 
         private bool isAttacking;
+
+        private void Start()
+        {
+            targeting = gameObject.GetComponent<ITargeting>();
+        }
 
         public void AttackEnemy()
         {
@@ -21,16 +27,12 @@ namespace UPBT.Systems
                 return;
             }
             
-            var target = targetingSystem.Target;
+            var target = targeting.Target;
             if (target is not null)
             {
                 isAttacking = true;
                 target.DealDamage(damage);
                 StartCoroutine(PlayAttackAnimation());
-            }
-            else
-            {
-                targetingSystem.SetNewTarget();
             }
         }
 

@@ -3,9 +3,9 @@ using UPBT.managers;
 
 namespace UPBT.Player.Character
 {
-    public class Targeting : MonoBehaviour
+    public class ManuelTargeting : MonoBehaviour, ITargeting
     {
-        public IFightParticipant? Target => ManagerCollection.FightManager!.GetEnemyOrNull(targetPosition);
+        public IFightParticipant? Target => GetTarget();
 
         [SerializeField] private TargetType targetType;
         private int targetPosition;
@@ -21,6 +21,18 @@ namespace UPBT.Player.Character
             }
         }
 
+        private IFightParticipant? GetTarget()
+        {
+            var target = ManagerCollection.FightManager!.GetEnemyOrNull(targetPosition);
+            if (target is null)
+            {
+                targetPosition -= 1;
+                target = ManagerCollection.FightManager!.GetEnemyOrNull(targetPosition);
+            }
+
+            return target;
+        }
+        
         public void SelectEnemyToRight()
         {
             var fightManager = ManagerCollection.FightManager;
