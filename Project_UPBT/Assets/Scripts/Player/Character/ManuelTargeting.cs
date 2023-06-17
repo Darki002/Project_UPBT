@@ -10,17 +10,6 @@ namespace UPBT.Player.Character
         [SerializeField] private TargetType targetType;
         private int targetPosition;
 
-        public void SetNewTarget()
-        {
-            if (targetPosition > 0)
-            {
-                if (targetPosition == ManagerCollection.FightManager!.EnemyCount)
-                {
-                    targetPosition -= 1;
-                }
-            }
-        }
-
         private IFightParticipant? GetTarget()
         {
             var target = ManagerCollection.FightManager!.GetEnemyOrNull(targetPosition);
