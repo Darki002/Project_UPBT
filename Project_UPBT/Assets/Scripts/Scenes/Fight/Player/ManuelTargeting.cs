@@ -1,7 +1,7 @@
 using UnityEngine;
 using UPBT.managers;
 
-namespace UPBT.Player.Character
+namespace UPBT.Player
 {
     public class ManuelTargeting : MonoBehaviour, ITargeting
     {

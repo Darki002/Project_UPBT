@@ -17,7 +17,7 @@ namespace UPBT.Systems
             currentHealth = maxHealth;
         }
 
-        public void DealDamage(int amount)
+        public void Reduce(int amount)
         {
             currentHealth = Mathf.Max(currentHealth - amount, 0);
             onHealthStateChanged?.Invoke(currentHealth, maxHealth);

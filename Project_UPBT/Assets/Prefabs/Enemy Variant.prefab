@@ -406,7 +406,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6175614586928067142}
         m_TargetAssemblyTypeName: UPBT.Systems.Health, Assembly-CSharp
-        m_MethodName: DealDamage
+        m_MethodName: Reduce
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
